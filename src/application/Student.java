@@ -48,9 +48,11 @@ public class Student {
 		CSHL = cSHL;
 	}
 
-	public Observable filteredProperty() {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean isEnrolled(String subject) {
+		if (subject.equals("All")) return true;
+		if (subject.equals("CS") && CSHL) return true;
+		if (subject.equals("A&A") && AAHL) return true;
+		return false;
 	}
 
 }

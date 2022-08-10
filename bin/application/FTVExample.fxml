@@ -1,19 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="application.FTVExampleController">
    <children>
-      <TableView fx:id="tblStudentList" prefHeight="400.0" prefWidth="320.0">
-        <columns>
-          <TableColumn fx:id="tcolFName" prefWidth="90.0" text="First Name" />
-          <TableColumn fx:id="tcolSName" prefWidth="90.0" text="Family Name" />
-            <TableColumn fx:id="tcolAAHL" prefWidth="60.0" text="A&amp;A HL" />
-            <TableColumn fx:id="tcolCSHL" prefWidth="60.0" text="CS HL" />
-        </columns>
-      </TableView>
+      <VBox>
+         <children>
+            <HBox prefHeight="19.0" prefWidth="320.0">
+               <children>
+                  <Button minWidth="70.0" mnemonicParsing="false" onAction="#onClickAll" text="All">
+                     <HBox.margin>
+                        <Insets left="2.0" right="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button minWidth="70.0" mnemonicParsing="false" onAction="#onClickMaths" text="Maths">
+                     <HBox.margin>
+                        <Insets left="2.0" right="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button minWidth="70.0" mnemonicParsing="false" onAction="#onClickCompSci" text="Comp Sci">
+                     <HBox.margin>
+                        <Insets left="2.0" right="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView fx:id="tblStudentList" prefHeight="400.0" prefWidth="320.0">
+              <columns>
+                <TableColumn fx:id="tcolFName" prefWidth="90.0" text="First Name" />
+                <TableColumn fx:id="tcolSName" prefWidth="90.0" text="Family Name" />
+                  <TableColumn fx:id="tcolAAHL" prefWidth="60.0" text="A&amp;A HL" />
+                  <TableColumn fx:id="tcolCSHL" prefWidth="60.0" text="CS HL" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
